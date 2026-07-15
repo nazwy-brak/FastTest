@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<html lang="pl-PL">
+ <head>
+  <title>FastTest - narracyjna mechanika RPG</title>
+  <link rel="stylesheet" href="fastest_styl.css" />
+  <link rel="icon" type="image/x-icon" href="logo_fasttest.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+<body>
+<header>
+    <div id="flexcontainer">
+        <img src="logo_fasttest.svg" alt="FastTest">
+        
+        <div id="miniflex">
+            <p>FastTest</p>
+            <p>Narracyjna mechanika<br>
+                do gier fabularnych</p>
+        </div>
+        
+    </div>
+</header>
+    
+<!--
+<nav>
+
+</nav>
+-->
+    
+<div id="mainDiv">
+    
+<section>        
+<!--<h1>Wstęp</h1>-->
+ 
+<p class="cytat">Najprostsza mechanika nazywa się Mechanika, &shy;i ma tylko jeden &shy;parametr, który nazywa się Parametr. Jeden test Parametru wskazuje, czy postaci wszystko na sesji się udało &shy;i czy przeżyła.</p>
+<p class="cytat" id="podpis">Zarith</p>
+
+<h2>Dla kogo są te zasady?</h2> 
+<p>Mechanika FastTest powstała, żeby wspomagać określony styl gry, i przede wszystkim w tym jednym stylu się sprawdza.</p>
+<p>Zasady mają za zadanie możliwie przyśpieszyć i uprościć mechaniczną stronę rozgrywki, ale dać poczucie, że tradycyjne elementy RPG, np. definiujące starcie, zostały zachowane. Dlatego nie jest tak radykalna jak <i>Mechanika</i> z cytatu powyżej.</p>
+
+<h2>Główne założenia:</h2>
+<ul>
+<li><strong>Ograniczyć buchalterię</strong> — prowadząc sesję masz mnóstwo rzeczy na głowie i pilnowanie, ile który NPC ma jeszcze punktów wytrzymałości, pancerza czy magii, jest wyjątkowo uciążliwe. FastTest pozbywa się tych elementów. </li>
+<li><strong>Wynik testu wypada bezpośrednio na kościach</strong> — gracz patrząc na kostki powinien bez liczenia wiedzieć, jaki rezultat wypadł. Bez sprawdzania, w tabelce czy drabince, winien od razu rozumieć stopień sukcesu czy porażki. </li>
+<li><strong>Bardzo szybkie tworzenie postaci</strong> — wypełnienie karty postaci zajmuje kilka minut, nie wymaga losowania, a wyróżniki pozwalają na uszczegółowienie koncepcji bohatera. </li>
+<li><strong>Możliwość dwojakiego traktowania przeciwników</strong> — NPC-ów i wrogów można opisywać na dwa sposoby: albo przyznać im zestaw cech, tak jak graczom, albo — jeśli preferujesz styl, gdzie tylko gracze rzucają kościami — stworzyć NPC-ów jako zbiór modyfikatorów do testów dla graczy.</li>
+</ul>
+</section>
+    
+<section>
+<h1 id="opisanie">Opisanie bohatera</h1>
+<a href="karta_wypelniona.jpg"><img src="karta_wypelniona_mala.jpg"></a>
+<p>Każda postać prowa&shy;dzona przez gracza ma trzy rodzaje współ&shy;czyn&shy;ników.</p>
+
+<h2>Cechy</h2>
+<ul>
+	<li>przyjmują wartości od 3 do 7</li>
+	<li>przykładowe cechy: BUDOWA, ZRĘCZNOŚĆ, UMYSŁ, DUCH</li>
+</ul>
+
+
+<h2>Umiejętności</h2>
+<ul>
+	<li>przyjmują wartości od -2 do +2, ich suma musi wynieść 0</li>
+	<li>reprezentują bardzo ogólne aspekty kompetencji postaci</li>
+	<li>są modyfikatorami cech, nie są testowane samodzielnie</li>
+	<li>każda cecha może być modyfikowana o umiejętność, jeśli grający uznają że to zestawienie jest adekwatne.</li>
+	<li>najlepiej by było ich około 6</li>
+	<li>przykładowe umiejętności: WALKA, SPRAWNOŚĆ, KULTURA, TECHNIKA, PRZYRODA, MAGIA, EKWIPUNEK</li>
+	<li>EKWIPUNEK - jedyna nietypowa umiejętność, dlatego zasługuje na osobne omówienie - to umiejętność będąca wypadkową zapobiegliwości, dbałości o wyposażenie, znajomiści jego obsługi i umiejętności posługiwania się nim. Test UMYSŁ + EKWIPUNEK odpowiada na typowe pytanie „Czy ja mogłem mieć ze sobą latarkę?”, a np. test ZRĘCZNOŚĆ + EKWIPUNEK na pytanie „Czy utrzymałem miecz w ręce, spadając z konia?”</li>
+    
+</ul>
+
+
+<h2>Wyróżniki</h2>
+<ul>
+    <li>Za wyróżniki, jeśli są adekwatne do testowanej czynności, dostajesz dodatkowe kości do testu - tzw. kości bonusowe.</li>
+    <li>Na twoje wyróżniki składają się koncepcja/profesja oraz zdolności.</li>
+</ul>
+
+
+<h3>Co to jest koncepcja?</h3>
+<p>Na przykład „Rycerz królestwa”, albo „czarodziej”, albo „złodziejaszek”, ale sprawdzi się też „uciekinier ze splądrowanego miasta” albo „miłośnik drogiego wina”. Coś co określa twoją postać i jej miejsce w świecie. Na początek, zwłaszcza graczom, którzy lepiej czują się w tradycyjnych grach fabularnych, radzimy, żeby wybrali sobie profesję jako koncepcję.</p>
+
+<h3>Co to są zdolności?</h3>
+<p>Rzeczy w których wykonywaniu postać jest szczególnie dobra. Przykłady: łucznictwo, włamania, skradanie, tropienie, jeździectwo, inżynieria itd. Ich lista jest otwarta, trzeba się tylko upewnić że MG zaakceptuje daną zdolność.</p>
+</section>
+  
+    
+    
+    
+<section>
+<h1 id="testy">Testowanie</h1> 
+<a href="testowanie_fasttest_duze.jpg"><img src="testowanie_fasttest_male.png"></a>
+<p>Wszystkie zdarzenia wyma&shy;gające testu można spro&shy;wa&shy;dzić do <strong>konfron&shy;tacji</strong> (a więc pewnej formy testu porów&shy;naw&shy;czego) pomiędzy postacią gracza i prze&shy;ciwn&shy;oś&shy;ciami, które stają mu na drodze. W tym wypadku obojętne jest, czy przeciw&shy;nością są np. <i>wysokie mury</i>, na które trzeba się wspiąć, <i>nieko&shy;rzystna pogoda</i>, którą trzeba znosić, czy może <i>wściekły ork</i>, atakujący bohatera. Każdy test jest zatem formą przezwy&shy;ciężania przeciw&shy;ności.</p>
+<p>Przeciwności w grze mają swoje wyróżniki, określane tak samo jak wyróżniki postaci gracza: kostkami. Tyle że kostki przeciwności to kości karne, bo stanowią utrudnienie testu, a nie ułatwienie.</p>
+
+<h2>Sposób testowania</h2>
+<p>Za każdym razem, kiedy postać zamierza podjąć działanie i nie mamy pewności, jaki będzie wynik, MG zarządza wykonanie testu. Testujemy cechę postaci, zmodyfikowaną o umiejętność. I taką parę: cecha+umiejętność MG powinien wskazać graczowi. („Jeśli podnosisz ten ciężki kamień, przetestuj <i>Budowę</i> ze <i>Sprawnością</i>, ” albo „Próbując wydobyć informacje od rozmówcy, przetestuj <i>Umysł</i> z <i>Kulturą</i>”).</p>
+<p>Ponieważ cechy mają zakres od 3 do 7, a umiejętności modyfikują je o zakres od -2 do +2, otrzymujemy rozpiętość szansy testów od 1 do 9. </p>
+
+
+<p>Do testu używamy dwóch kości: K10 i K6. Nie są sumowane, każdy z wyników jest rozpatrywany osobno.</p>
+<h3>K10: sukces czy porażka?</h3>
+<p>Jeśli wynik rzutu mieści się w sumie wskazanej cechy i umiejętności, działanie zakończyło się sukcesem. Jeśli wynik rzutu jest większy od tejże sumy, to test zakończył się porażką.</p> 
+<p>Można też wynik testu interpretować jako odpowiedź na pytanie „Czy udało mi się…?” Wtedy wynik odczytujemy jako „Tak” bądź „Nie”, zależnie od wyniku rzutu.</p>
+
+<h3>K6: jak bardzo?</h3>
+<p>Jeśli wypadnie 6, mamy do czynienia z krytycznym sukcesem lub porażką. Wynik testu można interprtetować jako „Tak i jeszcze…” bądź „Nie i jeszcze…”</p>
+<p>Jeśli wypadnie 1, 2 lub 3, mamy do czynienia z pomniejszym wynikiem, rzut można intrerpretować jako „Tak, ale…” bądź „Nie, ale…”.</p>
+<p>Wyrzucenie 4 lub 5 nie wpływa na wynik, zatem pozostają „Tak” lub „Nie” (albo zwykły sukces i porażka) odczytane z wyniku K10.</p>
+
+<h3>Możliwe wyniki testu</h3>
+<p>Każdy test daje jeden z sześciu możliwych wyników:</p>
+<table>
+    <tr>
+        <td>• Znaczący sukces</td>
+        <td>(tak, i jeszcze…)</td>
+    </tr>
+
+    <tr>
+       <td>• Sukces</td>
+       <td>(tak)</td>
+     </tr>
+
+    <tr>
+        <td>• Pomniejszy sukces</td>
+        <td>(tak, ale…)</td>
+    </tr>
+    <tr>
+        <td>• Pomniejsza porażka</td>
+        <td>(nie, ale…)</td>
+    </tr>
+
+    <tr>
+        <td>• Porażka</td>
+        <td>(nie)</td>
+    </tr>
+
+    <tr>
+        <td>• Znacząca porażka</td>
+        <td>(nie, i jeszcze…)</td>
+    </tr>
+
+</table>
+
+<h2>Granice szansy</h2>
+<p>SZANSA — to suma cechy i umiejętności, porównywana podczas testu z kością K10. Szansa powinna przyjmować wartość od 1 do 9. Jeśli z jakichkolwiek powodów wychodzi poza te wartości, każdy punkt poza skalą to dodatkowa kość (karna lub bonusowa) do rzutu. Jeśliby np. bohater miał 8 budowy i +2 walki, suma wyniesie 10, ale: jego szansa w walce wręcz pozostanie 9, zaś dodatkowy 1 punkt zamienia się w kość bonusową. Jeśliby bohater miał np. budowę 2, zaś walkę -2, suma wyniesie 0, ale: szansa pozostaje 1, zaś brakujący 1 punkt zostaje zamieniony w kość karną.</p>
+
+<h2>Kości karne i bonusowe </h2>
+<p>Wszystkie modyfikatory w Fattest przyjmują postać kości, dokładanych do testu. Modyfikator może być pozytywny (kość bonusowa) lub negatywny (kość karna). </p>
+<p>Kości bonusowe dodawane są za wyróżniki oraz za wszelkie okoliczności, które można uznać za sprzyjające powodzeniu testu.</p>
+ <p>MG przyznaje też kości karne — za wszelkie niedogodności przeszkadzające w podjęciu wyzwania, tudzież za wszelkie przeciwdziałania, np. ze strony BNów. </p>
+    <p><strong>Pozytywne i negatywne kości znoszą się.</strong> Kości pozostałe po tej redukcji są dodawane do kości podstawowych. Razem tworzą pulę kości do rzutu.</p>
+<p>Po ustaleniu puli kości, gracz decyduje jakiego rodzaju kości dorzuci do testu: czy będą to K10 (zwiększające szansę sukcesu) czy K6 (zmieniające szansę korzystnego stopniowania testu).</p>
+<p>Spośród wyrzuconych wyników <strong>gracz wybiera dwie kości</strong>: jedną K10 i jedną K6 i odczytuje z nich wynik.</p>
+<p>Jeśli w puli były kości bonusowe, gracz wybiera dwie kości na których wypadły najkorzystniejsze dla niego wyniki. Jeśli w puli były kości karne, musi wybrać wyniki najmniej korzystne.</p>
+
+<h2>Rzut porównawczy</h2>
+<p>Jeśli dwie postaci próbują robić przeciwstawne rzeczy (obojętnie czy będzie to walka, siłowanie się, czy dyskusja), MG może zarządzić test przeciwstawny. Obie strony rzucają test i porównujemy wyniki: ten kto uzyskał lepszy wynik testu, wygrywa. Jeśli wyniki skrajnie się różnią, zwycięstwo jest wyraźne lub nawet krytyczne.</p>
+<p>Jeśli obie strony osiągnęły ten sam wynik, jedna ze stron wciąż może uzyskać pomniejszy sukces:</p>
+<ul>
+ <li>jest to postać, która miała większą szansę (czyli sumę CECHA+UMIEJĘTNOŚĆ).</li>
+<!-- <li>jeśli nadal mamy remis, wygrywa ten kto wyrzucił więcej na K6.</li>-->
+ <li>jeśli nadal nie wyłoniono zwycięzcy, wygrywa ten, kto wyrzucił w czasie testu więcej na kości k10.</li>
+ <li>jeśli i to nie wyłoniło zwycięzcy, mamy remis. Zależnie od sytuacji MG może zdecydować że remis rozwiązuje konflikt, bądź że potrzebna jest kolejna runda/dogrywka.</li>
+</ul>
+<h2>Kilka umiejętności do jednej czynności (zasada opcjonalna)</h2>
+<p>Jeśli wyda się to adekwatne w danej sytuacji, można zażądać testu z udziałem dwóch, nie jednej umiejętności. </p>
+<p>Przykład: Jeśli gracz chce trafić wrażliwe miejsce jelenia, by zabić go jedną strzałą, możesz zarządzić test ZRĘCZNOŚĆ + PRZYRODA + WALKA. </p>
+<p>Pamiętajmy, że taki test może wypchnąć szansę grana poza zakres 1-9. W takim razie należy za każdy punkt poza zakresem przyznawać kość karną lub bonusową, zgodnie z opcjonalnymi zasadami. </p>
+<p>Szczególnie dobrym obszarem takich wieloumiejętnościowych testów mogą być czary. Przykładowo, zarodziejską kulę ognia możemy potraktować jako kierowaną umysłem siłę przyrody, użytą jako pocisk. Mamy więc UMY + PRZYR + WALK</p>
+
+
+
+
+</section>
+ 
+    
+    
+    
+<section>
+
+<h1 id="tworzenie">Tworzenie Postaci</h1>
+
+<h2>1. Cechy:</h2>
+<p>Masz 4 cechy (budowa, zręczność, Umysł i Duch).</p>
+<p>Rozdziel pomiędzy nie 20 punktów.</p>
+<p>Na każdą cechę od 3 do 7 punktów.</p>
+
+<h2>2. Umiejętności:</h2>
+<p>Masz 6 umiejętności.</p>
+<p>Mogą mieć wartości od -2 do +2.</p>
+<p>Ich suma musi wyjść na 0.</p>
+
+<h2>3. Wyróżniki</h2>
+<p>Masz 3 punkty do rozdziału na wyróżniki. Możesz na jeden wyróżnik wydać max 2 punkty.</p>
+<p>Jako pierwszy wyróżnik zapisz koncepcję/profesję swej postaci, następnie dopisz zdolności.</p>
+
+
+<h3>3a. Wada</h3>
+<p>Jeśli chcesz dostać czwarty punkt na wyróżniki, możesz uzyskać go, w zamian dopisując dodatkowy wyróżnik, który jest wadą/utrapieniem. MG ocenia, czy wada rzeczywiście jest wadą. Dwuznaczne zaleto-wady odpadają.</p>
+
+</section>
+
+    
+    
+    
+<section>
+<h1 id="przeciwnosci">Przeciwności i&nbsp;wrogowie</h1>
+
+
+<p>Z punktu widzenia mechaniki wszelkie utrudnienia do testów to przeciwności, z któymi gracz się konfrontuje. Nie jest na dobrą sprawę takie istotne, czy przeciwnością jest sromizna skalna, na którą postać się wspina, czy uzbrojony przeciwnik, z którym musi się mierzyć. Obie konfrontacje spowodują, że w czasie testu gracz będzie musiał dorzucić pewną ilość kości utrudnienia.</p>
+    
+<h2>NPC jako zestaw przeciwności</h2>
+    
+<p>W odróżnieniu od postaci graczy, bohaterowie niezależni i stwory z bestiariusza nie mają zestawu cech podobnego graczom, a jedynie wyróżniki, użyteczne w określonych sytuacjach. Wyróżniki postaci niezależnych oraz stworów są liczone w kostkach trudności, wystawianych do testu przeciwko graczom. I tak wrogi wojownik może mieć następującą charakterystykę:</p> 
+ <div class="npc">
+     <img src="zawadiaka.png">
+     <div>
+         <p><strong>Wojownik</strong></p>
+         <ul>
+    <li>szermierz&nbsp;4k</li>
+    <li>bezczelny awanturnik&nbsp;3k</li>
+    <li>pomniejszy szlachetka&nbsp;2k</li>
+    <li>zwinny&nbsp;2k</li>
+    <li>przystojniak</li>
+    <li>jeździec</li>
+   </ul>
+     </div>
+     
+
+</div>
+
+<p class="clearleft">(Wyróżniki bez wartości cyfrowej traktujemy jako 1k)</p>
+
+<p>W sytuacjach które są adekwatne do rozpisanych wartości, gracze konfrontujący się z owym NPC-em mają odpowiednie utrudnienia do testu.</p> 
+<p>Może się zdarzyć, że w danej sytuacji będzie adekwatna więcej niż jedna cecha NPCa lub stwora. Należy wtedy wybrać tę o najwyższej wartości, a do tego dodać po 1k za każdą następną adekwatną umiejętność.</p>
+
+<p>Przykład: bohater usiłuje ubić mieczem opisanego powyżej szermierza. W tej sytuacji adekwatnymi wyróżnikami przeciwnika są tu „szermierka 4", po niej zaś „zwinny”. Bierzemy wartość najwyższego wyróżnika, i dodajemy jeszcze jedną kostkę za zwinność. Razem wychodzi 5 kości utrudnienia. Niemało. Biorąc pod uwagę, że zwykle przy konfrontacji gracz posiada 2-3 kości bonusów ze swoich wyróżników, przyjdzie rzucać dwoma lub nawet trzema kośćmi karnymi! Szansa zwycięstwa spada drastycznie!</p>
+
+<h3>Uwagi:</h3>
+<ul>
+ <li>Silny wróg/przeciwność będzie mieć około 4-5 kości trudności przeciw testom graczy. To powinno wyrównać szanse, biorąc pod uwagę że gracze najczęściej wykorzystują te cechy swoich postaci, które są najwyższe.</li>
+ <li>Zbiór 6-7 kości karnych będzie już mocno przechylał szalę na niekorzyść gracza, bo szansa zwycięstwa w konfrontacji spadnie o ok. 50-60%.</li>
+</ul>
+
+
+
+<h3>Przykładowe potwory:</h3> 
+
+<div class="obejma">
+    
+    
+    
+    <div class="monsterek">
+        <img src="troll.png">     
+   
+        <div>
+         <p><strong>Troll</strong></p>
+            <ul>
+             <li>wielki 3k</li>
+             <li>paskudny 3k</li>
+             <li>śmierdzący 4k</li>
+             <li>regeneracja 2k</li>
+             <li>rozbijacz łbów&nbsp;2k</li>
+             <li>głodny</li>
+             <li>głupawy</li>
+            </ul>
+    </div>
+    </div>
+    
+    <div class="monsterek">
+        <img src="goblin.png">
+        <div>      
+            <p><strong>Goblin</strong></p>
+            <ul>
+             <li>wojak</li>
+             <li>paskudny&nbsp;2k</li>
+             <li>brudas</li>
+             <li>tchórz</li>
+             <li>stwór ciemności</li>
+             <li>złośliwy</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="monsterek" id="last">
+    <img src="smok.png">
+        <div>
+            <p><strong>Smok</strong></p>
+            <ul>
+               <li>olbrzymi 4k</li>
+               <li>straszny 4k</li>
+               <li>ognisty 2k</li>
+               <li>opancerzony&nbsp;3k</li>
+               <li>wytrzymały&nbsp;2k</li>
+               <li>chciwy</li>
+               <li>złośliwy</li>
+               <li>zarozumiały</li>
+               <li>latający 2k</li>
+            </ul>
+    
+        </div>    
+    </div>
+    
+</div>
+
+<p class="clearleft">Zauważmy, ta metoda ma na celu, by nie tworzyć olbrzymiego bestiariusza stworów, tylko żeby MG mógł na bieżąco stworzyć sobie potrzebnego potwora, przyznając mu kilka wyróżników. I na szybko użyć go w trakcie rozgrywki.</p>
+
+</section>
+
+    
+    
+    
+<section>
+
+<h1 id="walka">Walka</h1>
+
+<p>Nakazujesz graczowi test walki, pozwalając użyć wszelkich bonusów wynikających z wyróżników. Jako reprezentację przeciwdziałania wroga dorzucasz kości karne, uzasadniając je cechami wroga (np że jest silny, otrzaskany w boju, ma dobre uzbrojenie czy pancerz itd). Wynik testu odzwierciedla, jak dobrze graczowi poszło w walce.</p>
+
+<p>Sukces testu oznacza że gracz wygrywa: zadaje ranę, lub zgoła zdominowuje przeciwnika (np. jeśli osiągnął sukces krytyczny).</p>
+
+<p>Porażka oznacza, że to przeciwnik uzyskał przewagę i to on zadaje graczowi ranę.</p>
+<p>Jak poważne rany zostały zadane - zależy od używanej broni. Założenie jest takie, że <strong>ręczna broń</strong> (topór czy miecz) standardowo, czyli przy zwykłym sukcesie zadaje <strong>ciężką ranę</strong>, przy poważnym sukcesie - śmiertelną. Zaś przy sukcesie pomniejszym, kategoria jest osłabiana do obrażeń lekkich.</p>
+<p>Broń taka jak sztylety, kastety czy proce, zadaje standardowo obrażenia <strong>lekkie.</strong> Natomiast ciężka broń: wszelakie kopie, berdysze, dwuręczne miecze czy ciężkie kusze - zadają obrażenia <strong>śmiertelne.</strong></p>
+
+<h2>Rany</h2>
+    <p>Jeśli przegrałeś test walki, ponosisz konsekwencje: przeważnie otrzymujesz RANĘ. Rana może być śmiertelna, ciężka, lekka lub może być draśnięciem.</p>
+    <p>To jakie obrażenia otrzymujesz, zależy od używanej przez przeciwnika broni.</p>
+
+<h2>Konsekwencje ran</h2>
+    <ul>
+ <li>za każdą ranę otrzymujesz karną kość do testów.</li>
+ <li>ciężko ranny oprócz tego natychmiast testuje przytomność (test Budowy, pamiętaj o uwzględnieniu kości karnych za rany).</li>
+ <li>śmiertelnie ranny testuje Budowę albo umiera. Zachowuje przytomność tylko jeżeli wynik testu będzie bardzo dobry.</li>
+</ul>
+
+
+<p>Kiedy zaznaczasz kropkę ran, podpisz ją, np: „zwichnięta noga” albo „rozcięte ramię” itd. Obok kropki oznacz krzyżyk jeśli rana była opatrzona.</p>
+
+<h3>Jak MG ma traktować rany?</h3>
+<p>Jeśli pamiętasz, że ktoś jest ciężko ranny, możesz kazać mu ponownie testować Budowę, kiedy chce zrobić coś wysiłkowego: negatywny wynik to może być kolejna rana, albo utrata przytomności.</p>
+
+<ul>
+ <li><strong>Rana przeszkadza</strong> - ranny musi uważać na zranioną część ciała, oszczędzać ją itp. Inaczej naraża się na pogłębienie urazu. Dlatego każda rana to karna kość do działania, zwłaszcza fizycznego. Nieopatrzone rany są wystarczająco absorbujące, by przeszkadzały też w czynnościach umysłowych.</li>
+ <li><strong>Rana grozi pogorszeniem urazu</strong> - jeśli ranny dokonuje forsownej czynności, grozi to pogłębieniem urazu; co oznaczamy zakreślając kolejne pole rany. Jest to sprawdzane testem budowy, dokonywanym zaraz po owej forsownej czynności.</li>
+ <li><strong>Zignorowanie ran</strong> - można w razie potrzeby zignorować rany i dokonać forsownej czynności bez karnych kości od ran. Jednak konsekwencją będzie automatyczne pogłębienie urazów (od razu dopisz kolejną ranę) i test przytomności. Jest więc bardzo możliwe że ranny zbierze się w sobie, dokona wysiłku wbrew ranom, a potem padnie bez zmysłów albo nawet w agonii.</li>
+</ul>
+
+<h2>Pancerz</h2>
+
+<p>Punkt pancerza to kość bonusowa dodawana do rzutu na Budowę, dokonywanego, kiedy postać gracza odnosi ranę. To znacząco zwiększa szanse na pozytywny wynik tego testu i uniknięcie konsekwencji obrażeń.</p>
+<p>Ponadto, jeśli postać nosi pancerz, wynik bardzo dobry („tak, i…”) tego testu oznacza, że uniknęła rany w ogóle.
+</p>
+
+
+</section>
+
+    
+    
+    
+<section>
+
+<h1 id="magia">Magia</h1>
+    <p><strong>Uwaga:</strong> większość zasad dotyczących magii jest opcjonalna, używanie wszystkich na raz byłoby bez sensu. Należy spośród podanych możliwości wybrać grupę zasad pasujących do settingu.</p>
+<ul>
+<li>Nie ma listy czarów, użycie magii jest tak samo doraźnie rozpatrywane jak wszelki inne testy. Zasady podane tutaj mają ograniczać możliwości czarodzieja, który inaczej miałby każdy czar na zawołanie w każdej chwili.</li>
+<li>Stosujemy możliwie adekwatny test cecha+umiejętność.</li>
+<li>Z cech zwykle będzie to Duch lub Umysł.</li>
+<li>Umiejętności wybieramy zależne od sytuacji — przyzywanie żywiołaka albo uzdrawianie to zapewne test przyrody, walnięcie w kogoś magicznym pociskiem — pewnie walka, zaś odpędzanie nieumarłych to najpewniej kultura (jako aspekt religijny kultury), zwiększenie możliwości ciała — sprawność, itd.</li>
+<li>Aby rzucać czary, potrzebny jest jakiś związany z czarowaniem wyróżnik.</li>
+<li>Czary są trudne. Standardowa trudność to 2-3 karne kości.</li>
+<li>Czy czar może być łatwy? W zasadzie tak, jeśli gracz dobrze wykombinuje, trudność można obniżyć nawet do 0 kar.</li>
+</ul>
+ 
+
+<h2>Zasada podstawowa — niepowodzenie czaru</h2>
+<p>Jeśli czar się nie udał, energia magiczna musi znaleźć inne ujście. Zaproponuj skutek uboczny odpowiedni dla sytuacji (będzie to przedawkowanie magii, manifestacja Chaosu, przerwanie zasłony rzeczywistości — zależnie co pasuje do settingu).
+</p>
+<h2>Wyniki testu czarowania:</h2>
+<ul>
+<li><strong>Tak, i...</strong> — lepszy niż oczekiwany efekt czaru</li>
+<li><strong>Tak</strong> — czar udaje się jak zamierzono</li>
+<li><strong>Tak, ale...</strong> — występuje pomniejszy skutek uboczny</li>
+<li><strong>Nie, ale...</strong> — czar się nie udał, ale nie ma skutków ubocznych</li>
+<li><strong>Nie</strong> — czar się nie udał, wylosuj skutek uboczny</li>
+<li><strong>Nie i...</strong> — czar się nie udał, i jeszcze losujesz poważny skutek uboczny</li>
+</ul>
+
+
+<h2>Zasada niepowtarzalności</h2>
+<ul>
+<li>magia nie lubi się powtarzać. Dlatego za kolejne podobne czary dochodzą kolejne karne kości</li>
+<li>kiedy rzucasz czar, dowiadujesz się, jak bardzo niespokojna jest moc — kiedy próbujesz się z nią połączyć. Możesz wtedy zrezygnować z rzucania czaru, żeby uniknąć negatywnych konsekwencji</li>
+</ul>
+
+
+<h2>Opisanie czarodzieja</h2>
+<p>Duch jest czwartą cechą, dodawaną do zestawu jeśli świat gry dopuszcza używanie magii lub psioniki. </p>
+
+<p>Przykładowe wyróżniki magiczne: czarodziej, nekromanta, druid, kapłan, szaman itd. Nadają się jako podstawowy wyróżnik, profesja definiująca postać.</p>
+<p>Prócz tego można określić dodatkowe wyróżniki, definiujące bardziej szczegółowo, np:</p>
+    <ul>
+       <li>magia żywiołów (jeden z czterech)</li>
+       <li>magia życia (leczenie, kontakt i kontrola)</li>
+       <li>magia ducha (umysł, moc)</li>
+      </ul>
+
+<p>Lista wyróżników magicznych jest otwarta, ważne tylko by uzgodnić posiadanie danej umiejętności z MG i zdecydować, jakie możliwości postaci wybrany wyróżnik określa.</p>
+
+<h2>Magia jako kość zasobu</h2>
+<p>Można ją wykorzystywać jako miernik zmęczenia tudzież zużycia potencjału magicznego.</p>
+<p>Mamy skalę wielkości kości magii:</p>
+<p id="kosteczki"><span>K12</span> -> <span>K10</span> -> <span>K8</span> -> <span>K6</span> -> <span>K4</span>-> <span>brak</span></p>
+<p>Postać ma początkowo największą kostkę mocy, jaka mieści się w jego cesze Duch. Zatem mając Duch=7, dostajemy kość mocy K6, a Duch=3 oznacza brak kości magii, brak mocy w ogóle. </p>
+<p>Dodatkowo wyróżniki magiczne, np. „czarodziej" albo „magia ognia" podnoszą początkową kość o 1 kategorię. Np. magik o Duchu=5 (co dawałoby mu kość magii K4), ale z wyróżnikami „czarodziej” i „magia ognia” będzie miał ostatecznie kość magii K8.</p>
+<p>Maksymalna wartość kości magii to K12.</p>
+
+<h3>Test zasobu magii</h3>
+<p>Wykonywany jest dodatkowo, oprócz normalnego testu opisanego w zasadach ogólnych, określającego czy działanie się powiodło.</p>
+<p>Za każdym razem, kiedy gracz odgrywający czarodzieja rzuca czar, rzuca też swoją kością magii. Wyniki 1-2 oznaczają, że kość magii należy zmniejszyć o 1 kategorię. Kiedy najmniejsza kość magii (K4) zmniejsza się na skutek tej procedury, czarodziej pada nieprzytomny z wyczerpania.</p>
+<p>Odzyskanie przytomności to test Duch+Sprawność albo Budowa+Sprawność, MG decyduje zależnie od sytuacji.</p>
+<p><strong>Uwaga!</strong> Bardzo silne działania magiczne mogą powodować automatyczne obniżenie Koski magii, bez testu. Przykładami są silne czary, nieudane czary albo np. zacięte pojedynki mocy.</p>
+
+<h3>Niekontrolowana emanacja mocy (opcjonalnie)</h3>
+<p>Jeśli na kostce mocy wypadnie więcej, niż wynosi cecha Duch, następuje niekontrolowana erupcja mocy (losowana z tabeli). To wygodne przy odwzorowywaniu światów jak Warhammer, gdzie kontrolowanie potężnej magii jest zawsze ryzykowne.</p>
+
+<h3>Odzyskiwanie kości magii</h3>
+<p>Całonocny odpoczynek (sen) przywraca 1 poziom kości magii.</p>
+
+</section>
+  
+    
+    
+    
+    
+<section>
+<h1 id="rozwoj">Rozwój postaci</h1>
+<p>Po zakończeniu przygody, MG przyznaje graczom po kilka (2-5) punktów doświadczenia. Punkty te mogą być wydane na zakup nowych wyróżników bądź zwiększenie wartości wyróżników już posiadanych.</p>
+<p>Koszt zakupu nowego wyróżnika jest równy liczbie już posiadanych poziomów wyróżników. Np wojownik (2) z łucznictwem (2), walką mieczem i wytrzymałą budową, ma już 6 wyróżników, i kupienie nowego albo podniesienie któregoś o poziom będzie kosztowało właśnie tyle: 6 punktów doświadczenia.</p>
+
+<h2>Uczymy się na błędach (zasada opcjonalna)</h2> 
+ <p>Za każdym razem, kiedy bohater poniesie porażkę w istotnym dla sytuacji teście, przyznaj mu kość doświadczenia. (Zwykle używamy tu K6, bo są szeroko dostępne i każdy ma ich sporo. Sprawdzają się też rozmaite countery do gier.) Kość tą gracz może wykorzystać na dwa sposoby:</p>
+<p>Po pierwsze, można ją wydać jako kość bonusową w dowolnym teście. Kość tą dodajemy tuż przed rzutem, już po rozliczeniu pozostałych kostek. Jak przy każdej innej kości bonusowej, gracz tuż przed testem decyduje, jaką wybiera wielkość kości - czy K6 czy K10.</p>
+<p>Po drugie, jeśli gracz „dowiezie” kość doświadczenia do końca sesji, może ją zamienić na dodatkowy punkt doświadczenia.</p>
+
+</section>
+    
+       
+    <script>
+// wywołanie guzika
+let mybutton = document.getElementById("myBtn");
+
+// pokazanie guzika, kiedy użytkownik przewinie 20px od szczytu dokumentu
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>   
+</div>    
+     
+<footer>
+    <p>Pobierz karty postaci:</p>
+    <p class="karta"><a href="karta_fasttest_kolorowa.pdf">kolorowa</a></p>
+    <p class="karta"><a href="karta_fasttest_czarno-biala.pdf">czarno-biała</a></p>
+    <p id="podpis">(c)Narsilion</p>
+    <p id="podpis">Obrazki: <a href="https://www.freepik.com">Freepik</a></p> 
+</footer>
+     
+<!-- skrypt pokazujący szerokość okna urządzenia w pikselach logicznych
+
+
+<div style="position:fixed;top:0;left:0;background:white;padding:5px;z-index:9999;font-size:14px;"
+     id="vw"></div>
+
+<script>
+function showVW() {
+    document.getElementById("vw").textContent =
+        "viewport: " + window.innerWidth + "px";
+}
+showVW();
+window.addEventListener("resize", showVW);
+</script>
+-->
+
+    
+    
+</body>
+    
+
+
+<html>
