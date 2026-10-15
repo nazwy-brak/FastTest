@@ -334,6 +334,8 @@ div.monsterek p, div.npc p{
     margin-top: 0.5em !important;
     margin-left: 10px;
     border-bottom: 2px dotted var(--ceglasty-75);
+    font-style: normal;
+    font-family: "Tagesschrift", sans-serif;
 }
 
 
