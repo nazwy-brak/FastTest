@@ -130,7 +130,7 @@ header h1 {
   text-align: left;
   color: var(--bezowa-tinta);
     background: none;
-    border: none;
+    border: none !important;
     line-height: 1;
     font-family: Calibri, Arial, sans-serif;
 }
@@ -194,7 +194,7 @@ div#mainDiv section:nth-of-type(even) {
     background: var(--bezowa-tinta-75);
     }
 
-h1 {
+h2 {
     background-color: var(--bezowy-75);
 /*    line-height: 0.5;*/
     padding: 0.2em;
@@ -213,7 +213,7 @@ h1 {
     clear: left;
     }
 
-h2 {
+h3 {
     display: block;
 /*    background-color: var(--bezowy);*/
     line-height: 1.5;
@@ -235,7 +235,7 @@ h2 {
     clear: left;
     }
 
-h3 {/*background-color: var(--bezowy);*/
+h4 {/*background-color: var(--bezowy);*/
     display: inline-block;
     line-height: 1.5;
     padding: 0.25em;
