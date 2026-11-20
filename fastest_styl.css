@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alike+Angular&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 
 
 /*------------------- zmienne --------------*/
@@ -43,12 +46,18 @@ body {
     background: url("papier_tlo.jpg") repeat;
     color: var(--main_text);
     font-family: Calibri, Arial, sans-serif;
-    font-size: 1rem; /* tyle wynosi 1rem dla strony */
+    font-size: 1.1rem; /* tyle wynosi 1rem dla strony */
     margin: 0;
     padding: 0;
     height: 100vh;
     box-sizing: border-box;
     line-height: 1.5;
+    
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+    hyphenate-limit-last: always;
     text-wrap: pretty;
 
 }
@@ -111,16 +120,7 @@ header div img {
   margin: 0; padding: 0;
 }
 
-header p {
-  font-size: clamp(1rem, 4vw, 2rem);
-  margin: 0 10px;
-    padding: 0;
-  text-align: left;
-  color: var(--bezowa-tinta);
-    line-height: 1;
-    
 
-}
 
 header h1 {
     font-size: clamp(2rem, 6vw, 4rem);
@@ -132,9 +132,23 @@ header h1 {
     background: none;
     border: none !important;
     line-height: 1;
-    font-family: Calibri, Arial, sans-serif;
+    font-family: "Pirata One", system-ui !important;
+    
+}
+header h1::first-letter {
+    font-family: "UnifrakturCook", serif;
 }
 
+header p {
+  font-size: clamp(1rem, 4vw, 2rem);
+  margin: 0 10px;
+    padding: 0;
+  text-align: left;
+  color: var(--bezowa-tinta);
+    line-height: 1;
+    font-family: "Tagesschrift", system-ui !important;
+
+}
 
 /* --- stopka --- */
 footer {
@@ -258,7 +272,6 @@ p  {
     padding-left: 0.5em;
     margin-top: 0px;
     margin-bottom: 0.5em;
-    hyphens: auto;
     color: var (--main_text);
     orphans: 2; widows: 2;
 
@@ -286,6 +299,14 @@ p#podpis {
     padding-top: 0px;
     text-align: right;
     margin-bottom: 0.5em;
+}
+p.inicjal::first-letter {
+    /*font-family: "UnifrakturCook", serif;*/
+    font-family: "Pirata One", sans-serif;
+    font-size: 3.2em;
+    line-height: 0.7;
+    float: left;
+    margin-right: 0.1em;
 }
 
 ul {
